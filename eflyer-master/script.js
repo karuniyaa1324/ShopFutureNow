@@ -15,7 +15,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (username === 'admin' && password === 'password') {
         errorMessage.textContent = 'Login successful!';
         // You would typically redirect to another page or perform further actions here
-        window.location.href = 'index.html';
+        window.location.href = 'indexhome.html';
 
     } else {
         errorMessage.textContent = 'Invalid username or password.';

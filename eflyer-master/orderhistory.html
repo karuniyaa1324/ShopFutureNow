@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .order-details-button {
+            display: inline-block;
+            padding: 5px 10px;
+            color: #007bff;
+            text-decoration: none;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+        }
+        .order-details-button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        img{
+            width: 116 px;
+            height : 39 px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order History</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Total Amount</th>
+                    <th>Details</th>
+                    <th>others</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>123456</td>
+                    <td><img src="images/moisturiser.jpg">Re'equil Moisturiser<br>August 12, 2024</td>
+                    <td>Delivered</td>
+                    <td>Rs.600</td>
+                    <td><a href="order-details.html?order=123456" class="order-details-button">View Details</a></td>
+                    <td><a href="returnpge.html" class="return-button">Return</a></td>
+                </tr>
+                <tr>
+                    <td>123457</td>
+                    <td><img src="images/laptop-img.png">dell laptop<br>June 26, 2024</td>
+                    <td>Delivered</td>
+                    <td>Rs.50,000</td>
+                    <td><a href="order-details.html?order=123457" class="order-details-button">View Details</a></td>
+                    <td><a href="returnpge.html" class="return-button">Return</a></td>
+                </tr>
+                <!-- Add more orders as needed -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
