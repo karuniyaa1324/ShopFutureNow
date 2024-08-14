@@ -5,18 +5,21 @@ document.getElementById('location finder').addEventListener('add location', func
     
 
     // Simple client-side validation
-    if (ordernumber=== '' || brandname === '') {
-        errorMessage.textContent = 'Both fields are required.';
+    if ( === 'Galaxy Nirmal skywin mall') {
         return;
     }
 
     // For demo purposes, a hardcoded username and password check
-    if (ordernumber == '123456' && brandname == 'reequil moisturiser') {
-        window.location.href = 'locationtrack.html';
+    if (place == 'Revlon') {
         // You would typically redirect to another page or perform further actions here
-       
+    } 
+    if (place === 'Beauty Parradise brindavan road opp to SKS hospital') {
+         return;
+    }
 
-    } else {
+     
+
+    else {
         errorMessage.textContent= 'kindly check the details!';
     }
 });
