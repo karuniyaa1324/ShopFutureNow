@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: yellow;
+        }
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select a location</h1>
+    <form id="redirectForm">
+        <label for="pageSelect">Choose a location:</label>
+        <select id="pageSelect">
+            <option value="">--Select a location--</option>
+            <option value="revlon">Revlon</option>
+            <option value="galaxy">Galaxy, Nirmal Skywin Mall</option>
+            <option value="beauty">Beauty Parradise</option>
+        </select>
+        <button type="button" onclick="redirectToPage()">Go</button>
+    </form>
+    <script>
+        function redirectToPage() {
+            var select = document.getElementById('pageSelect');
+            var url = select.value;
+
+            if (url=='revlon') {
+                window.location.href = 'revlon.html'; // Redirect to the selected URL
+            }
+            if (url=='galaxy') {
+                window.location.href = 'galaxy.html'; // Redirect to the selected URL
+            }
+            if (url=='beauty') {
+                window.location.href = 'beautypara.html'; // Redirect to the selected URL
+            }
+        }
+    </script>
+</body>
+</html>
