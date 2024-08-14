@@ -27,59 +27,32 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Enter Locations</h1>
-        <label for="locationname">location name:</label>
-        <select id="locationname" name="locationname">
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
-            <option value="cherry">Cherry</option>
-            <option value="date">Date</option>
-            <option value="fig">Fig</option>
-            <option value="grape">Grape</option>
+    <h1>Select a location</h1>
+    <form id="redirectForm">
+        <label for="pageSelect">Choose a location:</label>
+        <select id="pageSelect">
+            <option value="">--Select a location--</option>
+            <option value="revlon">Revlon</option>
+            <option value="galaxy">Galaxy, Nirmal Skywin Mall</option>
+            <option value="beauty">Beauty Parradise</option>
         </select>
-        <button onclick="addLocation()">Add Location</button>
-        <div id="map"></div>
-    </div>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+        <button type="button" onclick="redirectToPage()">Go</button>
+    </form>
     <script>
-        let map;
-        let markers = [];
-        const geocoder = new google.maps.Geocoder();
+        function redirectToPage() {
+            var select = document.getElementById('pageSelect');
+            var url = select.value;
 
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8
-            });
-        }
-
-        function addLocation() {
-            const address = document.getElementById('locationInput').value;
-            if (address) {
-                geocoder.geocode({ address: address }, (results, status) => {
-                    if (status === 'OK') {
-                        const location = results[0].geometry.location;
-                        const marker = new google.maps.Marker({
-                            position: location,
-                            map: map,
-                            title: address
-                        });
-                        markers.push(marker);
-                        map.setCenter(location);
-                        map.setZoom(10);
-                        document.getElementById('locationInput').value = '';
-                    } else {
-                        alert('Geocode was not successful for the following reason: ' + status);
-                    }
-                });
-            } else {
-                alert('Please enter a location');
+            if (url=='revlon') {
+                window.location.href = 'revlon.html'; // Redirect to the selected URL
+            }
+            if (url=='galaxy') {
+                window.location.href = 'galaxy.html'; // Redirect to the selected URL
+            }
+            if (url=='beauty') {
+                window.location.href = 'beautypara.html'; // Redirect to the selected URL
             }
         }
-
-        window.onload = initMap;
     </script>
 </body>
 </html>
